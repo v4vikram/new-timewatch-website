@@ -15,6 +15,8 @@ export default function NotFound() {
         <Button asChild>
           <Link href="/" className="tomato-btn mt-6 py-3 block w-fit mx-auto ">
             Go back home
+
+            
           </Link>
         </Button>
       </div>

@@ -210,13 +210,13 @@ const CareerPage = () => {
             </h2>
             <Formik
               initialValues={{
-                roleApplyingFor: "test",
-                fullName: "test",
-                contactNumber: "1234567911",
-                emailAddress: "test@gmail.com",
-                location: "test",
+                roleApplyingFor: "",
+                fullName: "",
+                contactNumber: "",
+                emailAddress: "",
+                location: "",
                 coverLetter:
-                  "Continuous learning opportunities, certifications, and skill development programs",
+                  "",
                 resume: null,
               }}
               validationSchema={validationSchema}

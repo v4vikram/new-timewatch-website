@@ -78,8 +78,11 @@ export default function ProductCatSlider({ categorySlug }) {
                 
                 {/* IMAGE */}
                 <div className="relative h-56 bg-gray-100 overflow-hidden">
+                  {/* {
+                    console.log(`https://timewatchindia.com${p.productImage} `)
+                  } */}
                   <Image
-                    src={p.productImage || "/images/placeholder.jpeg"}
+                    src={`https://timewatchindia.com${p.productImage}`}
                     alt={p.productName}
                     fill
                     sizes="400"

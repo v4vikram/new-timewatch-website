@@ -22,6 +22,9 @@ const BlogList = () => {
           >
             {/* IMAGE */}
             <div className="h-48 bg-gradient-to-br from-[#d63438]/20 to-[#6d6f72]/20 relative">
+            {
+              console.log("blog.featuredImage", blog.featuredImage)
+            }
               <img
                 src={blog.featuredImage}
                 alt={blog.title}

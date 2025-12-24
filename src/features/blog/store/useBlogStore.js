@@ -3,7 +3,7 @@ import { blogAPI } from "../api/blog.api";
 
 export const useBlogStore = create((set, get) => ({
     blogs: [],
-    singleBlog:{},
+    singleBlog: {},
     categories: [],
     subCategories: [],
     trashedProducts: [],
@@ -65,9 +65,12 @@ export const useBlogStore = create((set, get) => ({
 
         try {
             const res = await blogAPI.list();
-            // console.log("all blog", res?.data.blog)
+            const blogsWithImages = res?.data?.blogs?.map(blog => blog);
 
-            set({ loading: false, blogs:res?.data?.blogs });
+            set({
+                loading: false,
+                blogs: blogsWithImages
+            });
             return res?.data;   // return the blog object
         } catch (error) {
             set({
@@ -89,7 +92,7 @@ export const useBlogStore = create((set, get) => ({
             const res = await blogAPI.single(slug);
             console.log("single blog", res?.data)
 
-            set({ loading: false,  });
+            set({ loading: false, });
             return res?.data;   // return the blog object
         } catch (error) {
             set({

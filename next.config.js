@@ -10,6 +10,7 @@ const nextConfig = {
       "72.60.202.56",
       "timewatchindia.com",
       "www.timewatchindia.com",
+      "preview.timewatchindia.com",
     ],
     remotePatterns: [
       {

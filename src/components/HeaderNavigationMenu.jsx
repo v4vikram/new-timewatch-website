@@ -161,17 +161,18 @@ export function HeaderNavigationMenu() {
           </NavigationMenuContent>
         </NavigationMenuItem>
 
+        
+
+        {/* Solutions (custom dropdown) */}
+        <NavigationMenuList>
+          <SolutionsDropdown getLinkClass={getLinkClass} />
+        </NavigationMenuList>
         {/* Download */}
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={getLinkClass("/downloads")}>
             <Link href="/downloads">Downloads</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
-
-        {/* Solutions (custom dropdown) */}
-        <NavigationMenuList>
-          <SolutionsDropdown getLinkClass={getLinkClass} />
-        </NavigationMenuList>
 
         {/* About */}
         <NavigationMenuItem>
@@ -194,11 +195,11 @@ export function HeaderNavigationMenu() {
           </NavigationMenuLink>
         </NavigationMenuItem>
         {/* Blogs */}
-        {/* <NavigationMenuItem>
+        <NavigationMenuItem>
           <NavigationMenuLink asChild className={getLinkClass("/blogs")}>
             <Link href="/blogs">Blogs</Link>
           </NavigationMenuLink>
-        </NavigationMenuItem> */}
+        </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
   );

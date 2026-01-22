@@ -2,6 +2,7 @@ import "./globals.css";
 import { Rajdhani } from "next/font/google";
 import GTM from "@/components/GTM";
 import ClientLayout from "@/components/ClientLayout"; // ✅ New client wrapper
+import sitemap from "./sitemap";
 
 const rajdhani = Rajdhani({
   subsets: ["latin"],
@@ -18,6 +19,8 @@ export const metadata = {
   },
 };
 
+sitemap()
+ 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={rajdhani.className}>

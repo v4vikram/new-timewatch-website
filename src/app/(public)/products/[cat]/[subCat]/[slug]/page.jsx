@@ -6,15 +6,13 @@ import { notFound } from "next/navigation";
 
 const BASE_URL = "https://www.timewatchindia.com";
 
-// 🧠 Generate metadata dynamically
+// Generate metadata dynamically
 export async function generateMetadata({ params }) {
   const { cat, subCat, slug } = params;
 
   try {
     const res = await axiosInstance.get(`/product/slug/${slug}`);
     const product = res?.data?.product;
-
-    console.log(":product", product)
 
     if (!product || product?.status === "draft") {
       return {};
@@ -25,13 +23,13 @@ export async function generateMetadata({ params }) {
       description:
         product.description || product.shortDesc || product.productName,
       alternates: {
-        canonical: `${BASE_URL}/poducts/${cat}/${subCat}/${slug}`,
+        canonical: `${BASE_URL}/products/${cat}/${subCat}/${slug}`,
       },
       openGraph: {
         title: product.productName,
         description: product.description || product.shortDesc,
-        url: `${BASE_URL}/poducts/${cat}/${subCat}/${slug}`,
-        images: product.productImage
+        url: `${BASE_URL}/products/${cat}/${subCat}/${slug}`,
+        images: product.productImage,
       },
     };
   } catch (error) {
@@ -40,12 +38,9 @@ export async function generateMetadata({ params }) {
   }
 }
 
-// 🧩 Product details page
+// Product details page
 export default async function ProductDetailsPage({ params }) {
-  // ❌ Don't use await
   const { slug } = params;
-
-  console.log("Fetching product details for slug:", slug);
 
   let product = null;
 
@@ -54,9 +49,7 @@ export default async function ProductDetailsPage({ params }) {
       next: { revalidate: 1 },
     });
     product = res?.data?.product;
-    console.log("single product", product);
   } catch (err) {
-    console.error("Product fetch error:", err?.response?.status || err.message);
     return notFound();
   }
 

@@ -9,7 +9,7 @@ const BlogList = () => {
   const { getAllBlog, blogs } = useBlogStore();
 
   useEffect(() => {
-    getAllBlog(); 
+    getAllBlog();
   }, []);
 
   return (
@@ -22,44 +22,35 @@ const BlogList = () => {
           >
             {/* IMAGE */}
             <div className="h-48 bg-gradient-to-br from-[#d63438]/20 to-[#6d6f72]/20 relative">
-            {
+              {/* {
               console.log("blog.featuredImage", blog.featuredImage)
-            }
+            } */}
               <img
                 src={blog.featuredImage}
                 alt={blog.title}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute top-4 left-4">
-                <span className="bg-[#d63438] text-white px-3 py-1 rounded-full text-sm font-medium capitalize">
-                  {blog.mainCategory}
-                </span>
-              </div>
             </div>
 
             {/* CONTENT */}
-            <div className="p-6">
-              {/* META */}
-              <div className="flex items-center text-sm text-gray-500 mb-3">
-                <Calendar className="w-4 h-4 mr-2" />
-                <span>{new Date(blog.createdAt).toLocaleDateString()}</span>
-                <span className="mx-2">•</span>
-                <Clock className="w-4 h-4 mr-1" />
-                <span>2 min read</span>
-              </div>
-
+            <div className="pt-2 pb-3 px-3">
               {/* TITLE */}
               <h3 className="text-xl font-semibold text-[#6d6f72] mb-3 line-clamp-2">
                 {blog.title}
               </h3>
 
               {/* DESCRIPTION */}
-              <p className="text-gray-600 mb-4 line-clamp-3">
+              {/* <p className="text-gray-600 mb-4 line-clamp-3">
                 {blog.description}
-              </p>
+              </p> */}
 
+              <div className="absolute. top-4. left-4. mb-2">
+                <span className="text-[#d63438] text-white. px-3. py-1 rounded-full text-sm font-semibold capitalize">
+                  {blog.mainCategory}
+                </span>
+              </div>
               {/* FOOTER */}
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between mb-2">
                 <div className="flex items-center">
                   <User className="w-4 h-4 text-gray-400 mr-2" />
                   <span className="text-sm text-gray-600">Admin</span>
@@ -72,6 +63,14 @@ const BlogList = () => {
                   Read More
                   <ChevronRight className="w-4 h-4 ml-1" />
                 </Link>
+              </div>
+              {/* META */}
+              <div className="flex items-center text-sm text-gray-500 mb-3">
+                <Calendar className="w-4 h-4 mr-2" />
+                <span>{new Date(blog.updatedAt).toLocaleDateString()}</span>
+                <span className="mx-2">•</span>
+                <Clock className="w-4 h-4 mr-1" />
+                <span>2 min read</span>
               </div>
             </div>
           </article>

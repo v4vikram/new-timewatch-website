@@ -251,6 +251,7 @@ export default function BannerSwiper() {
                     href="https://play.google.com/store/apps/details?id=com.app.evetimewatch"
                     target="_blank"
                   >
+                    
                     <Image
                       src="/images/sliders/home/play-store.png"
                       alt="play-store"

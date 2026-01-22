@@ -132,7 +132,7 @@ const BlogPage = async ({ params }) => {
 
               {/* Blog Content */}
               <div
-                className="text-gray-700 leading-relaxed space-y-6"
+                className="text-gray-700 leading-relaxed space-y-6 wrap-break-word"
                 dangerouslySetInnerHTML={{ __html: blog.content }}
               />
             </div>

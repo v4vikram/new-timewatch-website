@@ -42,11 +42,11 @@ const downloadPage = () => {
       icon: "/images/google-drive.png",
       url: "https://drive.google.com/file/d/12d-6KEwjnd-_vQJu-kgnXJ0iujodZA1j/view",
     },
-    {
-      title: "TimeWatch Access Contol SDK",
-      icon: "/images/google-drive.png",
-      url: "https://drive.google.com/file/d/1sjntsUBbB2mVTcRZWDkpY6Ziw_niCbaa/view",
-    },
+    // {
+    //   title: "TimeWatch Access Contol SDK",
+    //   icon: "/images/google-drive.png",
+    //   url: "https://drive.google.com/file/d/1sjntsUBbB2mVTcRZWDkpY6Ziw_niCbaa/view",
+    // },
     {
       title: "TrueFace SDK",
       icon: "/images/google-drive.png",

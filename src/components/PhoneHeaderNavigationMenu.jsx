@@ -33,9 +33,9 @@ const PhoneHeaderNavigationMenu = ({ isMenuOpen }) => {
   return (
     <nav className="pt-4 pb-2 h-full flex flex-col justify-between">
       <div className="space-y-2.">
-        <h1 className="px-4 text-secondary font-bold text-3xl">
+        <div className="px-4 text-secondary font-bold text-3xl">
           <span className="text-primary">Time</span>Watch
-        </h1>
+        </div>
         {menuItems.map((item, index) => (
           <Link
             key={item.label}

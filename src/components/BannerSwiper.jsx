@@ -53,7 +53,7 @@ export default function BannerSwiper() {
                     fill
                     className="object-contain"
                     priority
-                    quality={95}
+                    quality={70}
                     sizes="(max-width: 768px) 80vw, 40vw"
                   />
                 </div>
@@ -68,7 +68,7 @@ export default function BannerSwiper() {
                     fill
                     className="object-contain"
                     priority
-                    quality={95}
+                    quality={70}
                     sizes="(max-width: 768px) 80vw, 50vw"
                   />
                 </div>
@@ -87,10 +87,10 @@ export default function BannerSwiper() {
               {/* LEFT CONTENT */}
               <div className="flex-1 flex flex-col justify-center">
                 <div className="max-w-[600px]">
-                  <h1 className="text-3xl md:text-6xl font-bold text-primary">
+                  <h2 className="text-3xl md:text-6xl font-bold text-primary">
                     App Download Now <br />
                     <span className="text-secondary">Client Connect</span>
-                  </h1>
+                  </h2>
 
                   <hr className="w-1/3 rounded-2xl h-1.5 mt-2 md:h-2 bg-primary border-0" />
 
@@ -122,7 +122,7 @@ export default function BannerSwiper() {
                       width={110}
                       height={110}
                       className="object-contain border p-2"
-                      quality={95}
+                      quality={70}
                     />
                   </a>
 
@@ -136,7 +136,7 @@ export default function BannerSwiper() {
                       width={110}
                       height={110}
                       className="object-contain border p-2"
-                      quality={95}
+                      quality={70}
                     />
                   </a>
                 </div>
@@ -151,7 +151,7 @@ export default function BannerSwiper() {
                     fill
                     className="object-contain"
                     priority
-                    quality={95}
+                    quality={70}
                     sizes="(max-width: 768px) 80vw, 50vw"
                   />
                 </div>
@@ -169,10 +169,10 @@ export default function BannerSwiper() {
 
               <div className="flex-1 flex flex-col justify-center">
                 <div className="max-w-[600px]">
-                  <h1 className="text-3xl md:text-6xl font-bold text-primary">
+                  <h2 className="text-3xl md:text-6xl font-bold text-primary">
                     TrueFace Series Device{" "}
                     <span className="text-secondary">with 2 Year Warranty</span>
-                  </h1>
+                  </h2>
 
                   <hr className="w-1/3 rounded-2xl h-1.5 mt-2 md:h-2 bg-primary border-0" />
 
@@ -188,7 +188,7 @@ export default function BannerSwiper() {
                     alt="Features"
                     fill
                     className="object-contain brightness-0 contrast-200"
-                    quality={95}
+                    quality={70}
                     sizes="(max-width: 768px) 80vw, 40vw"
                   />
                 </div>
@@ -201,7 +201,7 @@ export default function BannerSwiper() {
                     alt="time-attendance-device"
                     fill
                     className="object-contain"
-                    quality={95}
+                    quality={70}
                     priority
                     sizes="(max-width: 768px) 80vw, 50vw"
                   />
@@ -220,10 +220,10 @@ export default function BannerSwiper() {
 
               <div className="flex-1 flex flex-col justify-center">
                 <div className="max-w-[600px]">
-                  <h1 className="text-3xl md:text-6xl font-bold text-primary">
+                  <h2 className="text-3xl md:text-6xl font-bold text-primary">
                     Simple way to <br />
                     <span className="text-secondary">Monitor Your Employee</span>
-                  </h1>
+                  </h2>
 
                   <hr className="w-1/3 rounded-2xl h-1.5 mt-2 md:h-2 bg-primary border-0" />
 
@@ -243,7 +243,7 @@ export default function BannerSwiper() {
                       width={110}
                       height={110}
                       className="object-contain border p-2"
-                      quality={95}
+                      quality={70}
                     />
                   </a>
 
@@ -258,7 +258,7 @@ export default function BannerSwiper() {
                       width={110}
                       height={110}
                       className="object-contain border p-2"
-                      quality={95}
+                      quality={70}
                     />
                   </a>
                 </div>
@@ -271,7 +271,7 @@ export default function BannerSwiper() {
                     alt="mobile-applications"
                     fill
                     className="object-contain"
-                    quality={95}
+                    quality={70}
                     priority
                     sizes="(max-width: 768px) 80vw, 50vw"
                   />

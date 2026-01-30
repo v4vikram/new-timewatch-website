@@ -37,7 +37,7 @@ import Link from "next/link";
 import { solutions } from "@/data/menuItems";
 import axiosInstance from "@/lib/axiosInstance";
 
-export const dynamic = "auto"; // optional; ISR will still work
+export const revalidate = 3600; // ISR: revalidate every 1 hour
 
 export const metadata = {
   title:
@@ -76,21 +76,26 @@ const clients = [
   "/images/clients/corporate-client/12.jpg",
 ];
 
-// ISR: Regenerate every 1 hour (3600 seconds)
+
 async function getFeaturedProducts() {
   try {
-    const res = await axiosInstance.get(`/product/featured-products`);
-    return res.data?.products || [];
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/product/featured-products`,
+      {
+        next: { revalidate: 3600 },
+      }
+    );
+
+    if (!res.ok) throw new Error("Failed to fetch");
+
+    const data = await res.json();
+    return data.products || [];
   } catch (error) {
-    if (error.code === "ECONNREFUSED") {
-      console.error("Backend not running or unreachable");
-    } else {
-      console.error("Error fetching products:", error.message);
-    }
-    // return empty array or null so UI doesn't crash
+    console.error("Error fetching products:", error.message);
     return [];
   }
 }
+
 
 export default async function HomePage() {
   const products = await getFeaturedProducts();

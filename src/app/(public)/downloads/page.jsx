@@ -19,11 +19,10 @@ export const metadata = {
   title: "TimeWatch Infocom | Downloads",
   description:
     "Download BiometricPro software solutions for time attendance, access control, and workforce management systems.",
-      alternates: {
+  alternates: {
     canonical: "https://www.timewatchindia.com/downloads",
-      }
+  },
 };
-
 
 const downloadPage = () => {
   const downloadData = [
@@ -126,8 +125,34 @@ const downloadPage = () => {
           </div>
         </div>
       </section>
+      {/* Office Profile Download Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-gradient-to-br from-[#d63438]/20 to-[#6d6f72]/20 rounded-3xl p-8">
+            <div className="bg-white rounded-2xl shadow-2xl p-8 text-center">
+              <Download className="w-16 h-16 text-[#d63438] mx-auto mb-6" />
+              <h3 className="text-2xl font-bold text-[#6d6f72] mb-4">
+                Download Company Profile
+              </h3>
+              <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+                Get our complete office profile document including company
+                overview, certifications, capabilities, and contact information
+                in one convenient file.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button asChild>
+                  <a href="/TimeWatch-Company-Profile.pdf" target="_blank">
+                    <Download className="w-4 h-4 mr-2" />
+                    Download Profile
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      {/* Support Section */}
+      {/* Support Section
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-br from-[#d63438]/20 to-[#6d6f72]/20 rounded-3xl p-8">
@@ -143,15 +168,13 @@ const downloadPage = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button className="" asChild>
-                 <Link href={'/contact'}>
-                     Contact Support
-                 </Link>
+                  <Link href={"/contact"}>Contact Support</Link>
                 </Button>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

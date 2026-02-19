@@ -16,7 +16,7 @@ export default function FlipBookClient() {
   const [dimensions, setDimensions] = useState({ width: 550, height: 800 });
   const [width, setWidth] = useState();
 
-  const totalImages = 60;
+  const totalImages = 43;
   const imagePaths = Array.from(
     { length: totalImages },
     (_, i) => `/images/flipbook/artboard-${i + 1}.jpg`

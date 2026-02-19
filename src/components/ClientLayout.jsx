@@ -11,7 +11,7 @@ import Link from "next/link";
 
 export default function ClientLayout({ children }) {
   const pathname = usePathname();
-  console.log("pathname", pathname);
+  // console.log("pathname", pathname);
 
   // ✅ Example: hide Header/Footer on specific pages
   const hideLayout = [

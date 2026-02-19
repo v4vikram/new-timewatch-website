@@ -18,6 +18,8 @@ export async function generateMetadata({ params }) {
       return {};
     }
 
+    console.log(`${BASE_URL}/products/${cat}/${subCat}/${slug}`)
+
     return {
       title: `${product.productName} | TimeWatch Infocom`,
       description:

@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 export default function SupportButtons() {
   const [showScroll, setShowScroll] = useState(false);
   const path = usePathname();
-  console.log("path", path);
+  // console.log("path", path);
 
   useEffect(() => {
     const handleScroll = () => {

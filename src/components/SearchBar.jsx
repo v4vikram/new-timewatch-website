@@ -47,7 +47,7 @@ export function SearchBar() {
       }
     };
 
-    const debounce = setTimeout(fetchResults, 300); // debounce search
+    const debounce = setTimeout(`fetchResults`, 300); // debounce search
     return () => clearTimeout(debounce);
   }, [query]);
 
@@ -57,7 +57,7 @@ export function SearchBar() {
     setOpen(false);
   };
 
-  console.log("results", results)
+  // console.log("results", results)
 
   return (
     <>

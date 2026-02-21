@@ -47,7 +47,7 @@ export function SearchBar() {
       }
     };
 
-    const debounce = setTimeout(`fetchResults`, 300); // debounce search
+    const debounce = setTimeout(fetchResults, 300); // debounce search
     return () => clearTimeout(debounce);
   }, [query]);
 
@@ -88,7 +88,6 @@ export function SearchBar() {
                 className="cursor-pointer"
               >
                 <ChevronRightIcon className="mr-2 h-4 w-4" />
-                {console.log(p.productName)}
                 {p.productName}
               </CommandItem>
             ))}

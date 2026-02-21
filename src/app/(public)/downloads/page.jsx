@@ -61,6 +61,12 @@ const downloadPage = () => {
       icon: "/images/google-drive.png",
       url: "https://timewatch.co.in/docs/TimeWatchCatalogue.pdf",
     },
+    {
+      title: "Bio Series SDK",
+      icon: "/images/google-drive.png",
+      url: "https://drive.google.com/open?id=1vAyPR66bQEKpV2siAhgXM1xWwpOd8Fyj&usp=drive_fs",
+      
+    },
   ];
 
   return (

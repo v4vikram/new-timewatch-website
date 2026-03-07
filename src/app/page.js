@@ -511,17 +511,17 @@ export default async function HomePage() {
 
 
         {/* Our Clients */}
-        <section class="">
-          <div class="text-center mb-12">
-            <div class="flex items-center justify-center space-x-4 mb-2">
-              <span class="h-0.5 w-10 bg-primary"></span>
-              <span class="text-primary font-semibold">Trusted Worldwide</span>
-              <span class="h-0.5 w-10 bg-primary"></span>
+        <section className="">
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center space-x-4 mb-2">
+              <span className="h-0.5 w-10 bg-primary"></span>
+              <span className="text-primary font-semibold">Trusted Worldwide</span>
+              <span className="h-0.5 w-10 bg-primary"></span>
             </div>
-            <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-2">
+            <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-2">
               Our Clients
             </h2>
-            <p class="text-xl text-secondary max-w-3xl mx-auto"> “Want to join our list of satisfied clients? Contact our team today!”
+            <p className="text-xl text-secondary max-w-3xl mx-auto"> “Want to join our list of satisfied clients? Contact our team today!”
               Get Catalog & Get a Free Consultation</p>
 
           </div>
@@ -738,14 +738,14 @@ export default async function HomePage() {
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div className="space-y-8">
                 <h2 className="text-3xl md:text-5xl font-bold text-[#6d6f72] mb-4">
                   <span className="text-primary">Let’s Secure</span> Your
                   Premises
                   <br /> with Smart Technology
                 </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                   Connect with our security experts today — claim your free
                   on-site consultation and see how we can protect your property!
                 </p>
@@ -804,7 +804,7 @@ export default async function HomePage() {
                     <h3 className="text-lg font-semibold text-[#6d6f72] mb-2">
                       Address
                     </h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 text-wrap">
                       {"D-162, Okhla Phase - I New Delhi - 110020"}
                     </p>
                   </div>

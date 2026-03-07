@@ -332,7 +332,7 @@ const TWLDTS2715Page = () => {
                   </li>
                 </ul>
 
-                <div class="flex flex-wrap gap-4 mt-5">
+                <div className="flex flex-wrap gap-4 mt-5">
                   <CatalogueDownload
                     downloadLink={
                       "https://storage.googleapis.com/timewatch-dashbord-bucket/uploads/docs/datasheet/twld-ts2700-datasheet-ver-2-0-bfctqz.pdf"
@@ -340,7 +340,7 @@ const TWLDTS2715Page = () => {
                   />
 
                   <a
-                    class="bg-secondary  text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center group"
+                    className="bg-secondary  text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center group"
                     href="#contact"
                   >
                     Enquiry Now
@@ -393,7 +393,7 @@ const TWLDTS2715Page = () => {
                     RFID, biometric & QR system compatibility
                   </li>
                 </ul>
-                <div class="flex flex-wrap gap-4 mt-5">
+                <div className="flex flex-wrap gap-4 mt-5">
                   <CatalogueDownload
                     downloadLink={
                       "https://storage.googleapis.com/timewatch-dashbord-bucket/uploads/docs/datasheet/twld-ts2715-datasheet-ver-2-0-eohhb1.pdf"
@@ -401,7 +401,7 @@ const TWLDTS2715Page = () => {
                   />
 
                   <a
-                    class="bg-secondary  text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center group"
+                    className="bg-secondary  text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center group"
                     href="#contact"
                   >
                     Enquiry Now

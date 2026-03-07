@@ -150,7 +150,7 @@ const schemaFaq = {
               </div>
 
               <h2 className="!mt-2">Key Benefits of TW-NE200</h2>
-           <ul class="list-disc pl-6 space-y-2">
+           <ul className="list-disc pl-6 space-y-2">
   <li><strong>Dual-Mode Detection:</strong> The TW-NE200 combines two modes in one device—explosives and narcotics detection—ensuring complete coverage.</li>
 
   <li><strong>Rapid Results:</strong> Provides test results in three seconds or less, improving security screening efficiency.</li>

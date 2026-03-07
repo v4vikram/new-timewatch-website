@@ -177,7 +177,7 @@ export default function CanteenManagementSystem() {
               </p>
 
               <h2>Key Features & Real-World Use Cases</h2>
-              <ul class="list-disc pl-6 space-y-2">
+              <ul className="list-disc pl-6 space-y-2">
                 <li>
                   <strong>Touchless & Secure Meal Access:</strong> Employees can
                   use face recognition, fingerprint, or RFID cards to collect

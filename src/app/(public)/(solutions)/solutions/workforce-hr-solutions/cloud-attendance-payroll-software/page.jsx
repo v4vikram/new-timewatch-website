@@ -154,7 +154,7 @@ export default function CloudAttendancePayrollSoftware() {
               <h2 className="!mt-2">
                 A Complete Solution for Attendance & Payroll
               </h2>
-              <ul class="list-disc pl-6 space-y-2">
+              <ul className="list-disc pl-6 space-y-2">
                 <li>
                   <strong>Smarter Shift & Roster Management:</strong> Managing
                   different shifts can be complex, especially for industries

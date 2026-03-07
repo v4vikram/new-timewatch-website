@@ -88,10 +88,10 @@ export function HeaderNavigationMenu() {
                   {products
                     ?.sort((a, b) => {
                       const indexA = categoryOrder.indexOf(
-                        a.categoryName?.toUpperCase()
+                        a.categoryName?.toUpperCase(),
                       );
                       const indexB = categoryOrder.indexOf(
-                        b.categoryName?.toUpperCase()
+                        b.categoryName?.toUpperCase(),
                       );
 
                       // if category not found, send to bottom
@@ -143,9 +143,9 @@ export function HeaderNavigationMenu() {
                             <Link
                               key={subCatIndex}
                               href={`/products/${seoFriendlySlug(
-                                pro.categoryName
+                                pro.categoryName,
                               )}/${seoFriendlySlug(
-                                subCat.subCategoryName
+                                subCat.subCategoryName,
                               )}/${seoFriendlySlug(product.productName)}`}
                               className="block text-[16px] hover:text-primary mb-1"
                             >
@@ -160,8 +160,6 @@ export function HeaderNavigationMenu() {
             </Tabs>
           </NavigationMenuContent>
         </NavigationMenuItem>
-
-        
 
         {/* Solutions (custom dropdown) */}
         <NavigationMenuList>
@@ -188,18 +186,44 @@ export function HeaderNavigationMenu() {
           </NavigationMenuLink>
         </NavigationMenuItem>
 
-        {/* ceo desk */}
-        <NavigationMenuItem>
-          <NavigationMenuLink asChild className={getLinkClass("/ceo-desk")}>
-            <Link href="/ceo-desk">CEO's Desk</Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
+        {/* Resource */}
+        <NavigationMenuList>
+          <NavigationMenuItem>
+            <NavigationMenuTrigger className="flex items-center gap-1 hover:!bg-transparent !bg-transparent data-[active=true]:!text-primary hover:!text-primary focus:!text-primary text-[18px] font-semibold !text-black">
+              <Link href={"/solutions"} className={getLinkClass("/solutions")}>
+                Resource
+              </Link>
+              {/* <ChevronDown className="w-4 h-4" /> */}
+            </NavigationMenuTrigger>
+
+            <NavigationMenuContent
+              className={"p-0 !border-0 -translate-x-[50%]"}
+            >
+              {/* Nested menu inside panel */}
+              <div className="border border-gray-100 bg-white !shadow-none rounded-md p-4 flex w-[200px] flex flex-col">
+                <div className="mb-4 hover:text-primary">
+                  <Link href={`https://eazypay.icicibank.com/eazypayLink?P1=b65SESRZWRLVerKiBAGNcA==#`} className="text-[16px] leading-[18px] block">
+                    Pay Now
+                  </Link>
+                </div>
+
+                <div className="mb-4 hover:text-primary">
+                  <Link href="/ceo-desk">CEO's Desk</Link>
+                </div>
+                <div className="mb-4 hover:text-primary">
+                  <Link href="/blogs">Blogs</Link>
+                </div>
+              </div>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+        </NavigationMenuList>
+
         {/* Blogs */}
-        <NavigationMenuItem>
+        {/* <NavigationMenuItem>
           <NavigationMenuLink asChild className={getLinkClass("/blogs")}>
             <Link href="/blogs">Blogs</Link>
           </NavigationMenuLink>
-        </NavigationMenuItem>
+        </NavigationMenuItem> */}
       </NavigationMenuList>
     </NavigationMenu>
   );

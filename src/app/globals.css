@@ -241,4 +241,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     @apply text-lg md:text-2xl text-white
   }
 }
+/* .react-tel-input .form-control{
+  @apply !w-full md:!w-[300px]
+} */
 

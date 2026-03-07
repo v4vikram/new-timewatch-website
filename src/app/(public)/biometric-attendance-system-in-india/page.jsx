@@ -536,7 +536,7 @@ export default function BiometricAttendancePage() {
         {/* Related Products */}
         <section>
           <div className="container mx-auto mt-20">
-            <h2 class="text-center mb-8 text-3xl lg:text-4xl font-extrabold text-secondary">
+            <h2 className="text-center mb-8 text-3xl lg:text-4xl font-extrabold text-secondary">
               Related Products
             </h2>
             <ProductCatCard categorySlug="time-attendance-and-access-control" />

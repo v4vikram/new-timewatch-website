@@ -26,7 +26,7 @@ const PhoneHeaderNavigationMenu = ({ isMenuOpen }) => {
     { icon: Lightbulb, label: "Solutions", href: "/solutions" },
     { icon: Info, label: "About", href: "/about" },
     { icon: User2, label: "CEO's Desk", href: "/ceo-desk" },
-    // { icon: BookOpenText , label: "Blogs", href: "/blogs" },
+    { icon: BookOpenText , label: "Blogs", href: "/blogs" },
     { icon: Phone, label: "Contact", href: "/contact" },
   ];
 

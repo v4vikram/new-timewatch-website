@@ -150,7 +150,7 @@ export default function HandHeldMetalDetectorTWHH100() {
               </div>
 
               <h2 className="!mt-2">Key Features & Benefits</h2>
-              <ul class="list-disc pl-6 space-y-2">
+              <ul className="list-disc pl-6 space-y-2">
                 <li>
                   <strong>
                     High-Definition X-Ray Imaging with AI Overlays:

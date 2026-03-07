@@ -32,6 +32,7 @@ const nextConfig = {
       },
       // add more
     ],
+    qualities: [50, 70, 75, 90],
   },
   // experimental: {
   //   prefetchBrowser: false,

@@ -43,7 +43,7 @@ export const metadata = {
   title:
     "Biometric Attendance, Baggage Scanners, DFMD, Parking & Security Automation Solutions | TimeWatch Infocom",
   description:
-    "TimeWatch offers advanced biometric attendance systems, baggage scanners, DFMDs, boom barriers, turnstiles, UVSS, ANPR cameras, and parking management solutions. Your trusted partner for smart access control and security automation across India and the UAE.",
+    "TimeWatch India offers biometric attendance machines, face recognition terminals, DFMD, baggage X-ray scanners, turnstiles, flap barriers, boom barriers & access control systems. Trusted by 10,000+ clients across India.",
   keywords:
     "biometric attendance system, access control system, baggage scanner, DFMD, boom barrier, parking management system, turnstile gate, full height turnstile, flap barrier, swing gate, visitor management system, UHF reader, UVSS, ANPR camera, automatic bollard, spike barrier, tyre killer, road blocker, security automation, AI face recognition, fingerprint attendance machine, palm vein recognition, cloud attendance software, vehicle access control, TimeWatch India",
   alternates: {
@@ -51,14 +51,31 @@ export const metadata = {
   },
   openGraph: {
     title:
-      "TimeWatch – Biometric Attendance, Baggage Scanners, DFMD, Parking & Security Automation Solutions",
+      "TimeWatch India — Biometric Attendance, DFMD, Baggage Scanners & Security Solutions",
     description:
-      "Explore TimeWatch’s full range of biometric attendance, baggage scanners, DFMDs, boom barriers, turnstiles, UVSS, ANPR cameras, and parking management systems for advanced access control and security automation.",
-    type: "website",
+      "India's trusted provider of biometric attendance machines, face recognition terminals, DFMD, baggage scanners, turnstiles, boom barriers & access control systems.",
     url: "https://www.timewatchindia.com/",
-    siteName: "TimeWatch",
+    siteName: "TimeWatch India",
     locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "https://www.timewatchindia.com/images/sliders/home/baggage.webp",
+        width: 1200,
+        height: 630,
+        alt: "TimeWatch India Security Solutions",
+      },
+    ],
   },
+  twitter: {
+  card: "summary_large_image",
+  title:
+    "TimeWatch India — Biometric Attendance, DFMD, Baggage Scanners & Security Solutions",
+  description:
+    "India's trusted provider of biometric attendance machines, face recognition terminals, DFMD, baggage scanners, turnstiles, boom barriers & access control systems.",
+  images: ["https://www.timewatchindia.com/images/sliders/home/baggage.webp"],
+},
+
 };
 
 const clients = [
@@ -98,6 +115,32 @@ async function getFeaturedProducts() {
 
 
 export default async function HomePage() {
+    const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "TimeWatch India",
+    url: "https://www.timewatchindia.com",
+    logo: "https://www.timewatchindia.com/timewatch-logo.svg",
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+91-95999-53923",
+      contactType: "Customer Support",
+      areaServed: "IN",
+      availableLanguage: "English",
+    },
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "D-162, Okhla Phase - I",
+      addressLocality: "New Delhi",
+      postalCode: "110020",
+      addressCountry: "IN",
+    },
+    sameAs: ["https://wa.me/919599953921"],
+    description:
+      "TimeWatch India provides biometric attendance systems, face recognition terminals, DFMD, baggage X-ray scanners, turnstiles, flap barriers, boom barriers, and access control solutions across India.",
+    areaServed: "India",
+    foundingLocation: "New Delhi, India",
+  };
   const products = await getFeaturedProducts();
   // console.log(products);
 
@@ -113,6 +156,10 @@ export default async function HomePage() {
   }));
   return (
     <div>
+       <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
 
       <main>
         <section>
@@ -710,7 +757,7 @@ export default async function HomePage() {
                 href="/product-catalouge"
                 className="bg-white text-[#d63438] px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all flex items-center justify-center space-x-2"
               >
-                <span>Get Catalouge</span>
+                <span>Get Catalogue</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link

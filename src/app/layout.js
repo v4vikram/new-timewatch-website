@@ -11,9 +11,9 @@ const rajdhani = Rajdhani({
 });
 
 export const metadata = {
-  title: "Baggage Scanners, Time Attendance & Access Control Systems | TimeWatch Infocom",
+  title: "Biometric Attendance Systems – Face, Fingerprint & Palm | DFMD & Baggage Scanners | TimeWatch India",
   description:
-    "TimeWatch Infocom provides trusted baggage scanners, time attendance, and access control systems across India, delivering smart, secure tech solutions.",
+    "TimeWatch India provides biometric attendance systems, face recognition terminals, DFMD, baggage X-ray scanners, turnstiles, flap barriers, boom barriers, and access control solutions across India.",
   alternates: {
     canonical: "https://www.timewatchindia.com",
   },

@@ -59,7 +59,7 @@ const downloadPage = () => {
     {
       title: "TimeWatch Catalogue",
       icon: "/images/google-drive.png",
-      url: "https://timewatch.co.in/docs/TimeWatchCatalogue.pdf",
+      url: "/images/Product-Catalogue-Ver.2.0.pdf",
     },
     {
       title: "Bio Series SDK",

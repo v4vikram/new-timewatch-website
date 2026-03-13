@@ -61,6 +61,30 @@ const addresses = [
     ],
   },
 ];
+const Globaladdresses = [
+   {
+    id: 12,
+    title: "Saudi Arabia",
+    name:"Mr. Hibban Mansoor",
+    email:"sales@timewatcharabia.com",
+    contact:"+966 53 915 7364",
+    
+    lines: [
+      "Building No. 7425, Secondary No. 2188 Al Olaya Street, Al Woroud District, Riyadh – 12253 Kingdom of Saudi Arabia",
+    ],
+  },
+   {
+    id: 12,
+    title: "United Arab Emirates (UAE)",
+    name:"Mr. Nitin",
+    email:"nitin@timewatchuae.com",
+    contact:"+971-54-777-0685",
+    
+    lines: [
+      "Building no. 08R-SH Saih Shuaib2, Plot no.176-0 Dubai",
+    ],
+  },
+];
 
 const ContactPage = () => {
   const contactInfo = [
@@ -80,7 +104,7 @@ const ContactPage = () => {
       icon: MapPin,
       title: "Address",
       details: ["D-162, Okhla Industrial Area Phase I, New Delhi, 110020"],
-      subtitle: "Mian office / Visit Us",
+      subtitle: "Head Office / Visit Us",
     },
     // {
     //   icon: Clock,
@@ -149,7 +173,7 @@ const ContactPage = () => {
             <div className="bg-white rounded-xl p-6 shadow-lg">
               <MapPin className="w-12 h-12 text-[#d63438] mx-auto mb-4" />
               <h3 className="text-lg font-semibold text-[#6d6f72] mb-2">
-                Mian Office / Visit Us
+                Head Office / Visit Us
               </h3>
               <p className="text-gray-600">
                 D-162, Okhla Industrial Area Phase I, New Delhi, 110020
@@ -246,9 +270,63 @@ const ContactPage = () => {
         </div>
       </section>
     <section className="py-12 px-4 bg-gray-50">
-  <div className="max-w-7xl mx-auto">
+       <div className="max-w-7xl mx-auto">
     <h2 className="text-3xl font-bold text-[#6d6f72] mb-8 text-center">
-      Our Branches
+      Our Global Presence
+    </h2>
+
+    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {Globaladdresses.map((addr) => (
+        <div
+          key={addr.id}
+          className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow p-6 flex flex-col"
+        >
+          {/* Branch Title */}
+          <div className="flex items-center mb-4">
+            <MapPin className="w-6 h-6 text-[#d63438] mr-2" />
+            <h3 className="text-xl font-semibold text-[#6d6f72]">
+              {addr.title}
+            </h3>
+          </div>
+
+          {/* Address Lines */}
+          <address className="not-italic text-gray-700 mb-4 space-y-1 pl-1">
+            {addr.lines.map((line, i) => (
+              <div key={i} className="flex items-start">
+                <MapPin className="w-4 h-4 text-[#6d6f72] mt-1 mr-2 flex-shrink-0" />
+                <span>{line}</span>
+              </div>
+            ))}
+          </address>
+
+          {/* Contact Info */}
+          <div className="mt-auto space-y-2 text-gray-600">
+            {addr.name && (
+              <p className="flex items-center">
+                <Building className="w-4 h-4 text-[#d63438] mr-2" />
+                <span className="font-bold text-black">Contact Person:&nbsp;</span> {addr.name}
+              </p>
+            )}
+            {addr.contact && (
+              <p className="flex items-center">
+                <Phone className="w-4 h-4 text-[#d63438] mr-2" />
+                <span className="font-bold text-black">Phone:&nbsp;</span> {addr.contact}
+              </p>
+            )}
+            {addr.email && (
+              <p className="flex items-center">
+                <Mail className="w-4 h-4 text-[#d63438] mr-2" />
+                <span className="font-bold text-black">Email:&nbsp;</span> {addr.email}
+              </p>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+  <div className="max-w-7xl mx-auto mt-10">
+    <h2 className="text-3xl font-bold text-[#6d6f72] mb-8 text-center">
+      Our Branches in India
     </h2>
 
     <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

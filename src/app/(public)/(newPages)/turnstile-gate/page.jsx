@@ -229,14 +229,14 @@ const TurnstileGatePage = () => {
               {/* Left — Image */}
               <div className="order-1">
                 <div className="bg-gradient-to-br from-primary/20 to-[#6d6f72]/20 rounded-3xl p-8">
-                  <div className="bg-white rounded-2xl shadow-2xl p-4 flex justify-center">
-                    <div className="relative w-[280px] h-[280px] md:w-[460px] md:h-[460px]">
+                  <div className="bg-white rounded-2xl shadow-2xl overflow-hidden flex justify-center">
+                    <div className="relative w-full h-[280px] md:h-[460px]">
                       <Image
                         src="/images/TWLD-TS2700.webp"
                         alt="What is a Turnstile Gate"
                         title="Turnstile Gate Access Control Overview"
                         fill
-                        className="object-contain p-10"
+                        className="object-cover"
                       />
                     </div>
                   </div>
@@ -266,20 +266,21 @@ const TurnstileGatePage = () => {
                   RFID cards to verify user identity before granting entry.
                 </p>
 
-                <div className="space-y-3">
-                  {[
-                    "Control pedestrian entry and exit",
-                    "Prevent tailgating and unauthorized access",
-                    "Integrate with biometric attendance systems",
-                    "Maintain orderly and secure entry points",
-                    "Support high-traffic pedestrian environments",
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                      <span className="text-gray-700">{item}</span>
-                    </div>
-                  ))}
-                </div>
+       <div className="grid grid-cols-1 sm:grid-cols-2">
+  {[
+    "Control pedestrian entry and exit",
+    "Prevent tailgating and unauthorized access",
+    "Integrate with biometric attendance systems",
+    "Maintain orderly and secure entry points",
+    "Support high-traffic pedestrian environments",
+  ].map((item, i) => (
+    <div key={i} className="flex items-start gap-3">
+      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+      <span className="text-gray-700">{item}</span>
+    </div>
+  ))}
+</div>
+
               </div>
             </div>
           </div>
@@ -350,14 +351,14 @@ const TurnstileGatePage = () => {
               {/* Right — Image */}
               <div className="order-1 lg:order-2 mt-10 lg:mt-0">
                 <div className="bg-gradient-to-br from-primary/20 to-[#6d6f72]/20 rounded-3xl p-8">
-                  <div className="bg-white rounded-2xl shadow-2xl p-4 flex justify-center">
-                    <div className="relative w-[280px] h-[280px] md:w-[460px] md:h-[460px]">
+                  <div className="bg-white rounded-2xl shadow-2xl overflow-hidden flex justify-center">
+                    <div className="relative w-full h-[280px]  md:h-[460px]">
                       <Image
                         src="/images/TWLD-TS2715.webp"
                         alt="Turnstile Gate Authentication Methods"
                         title="How Turnstile Gate Access Control Works"
                         fill
-                        className="object-contain"
+                        className="object-cover"
                       />
                     </div>
                   </div>

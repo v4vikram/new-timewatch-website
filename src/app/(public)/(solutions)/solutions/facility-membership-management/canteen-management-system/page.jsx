@@ -122,7 +122,7 @@ export default function CanteenManagementSystem() {
               in India
             </h1>
 
-            <p className="text-base md:text-xl text-white/90 hidden md:block max-w-2xl">
+            <p className="text-base md:text-xl !text-white hidden md:block max-w-2xl">
               Managing canteen operations in a growing organization is not easy.
               Paper coupons, manual registers, and cash counters often lead to
               long queues, food wastage, and misuse of facilities.

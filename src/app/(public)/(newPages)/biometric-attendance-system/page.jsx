@@ -220,14 +220,14 @@ const BiometricAttendanceSystemPage = () => {
               {/* Left — Image */}
               <div className="order-1">
                 <div className="bg-gradient-to-br from-primary/20 to-[#6d6f72]/20 rounded-3xl p-8">
-                  <div className="bg-white rounded-2xl shadow-2xl p-4 flex justify-center">
-                    <div className="relative w-[280px] h-[280px] md:w-[460px] md:h-[460px]">
+                  <div className="bg-white rounded-2xl shadow-2xl flex justify-center overflow-hidden">
+                    <div className="relative  h-[280px] w-full md:h-[460px]">
                       <Image
                         src="/images/TrueFace3000.webp"
                         alt="What is a Biometric Attendance System"
                         title="Biometric Attendance System Overview"
                         fill
-                        className="object-contain p-10"
+                        className="object-cover"
                       />
                     </div>
                   </div>
@@ -344,14 +344,14 @@ const BiometricAttendanceSystemPage = () => {
               {/* Right — Image */}
               <div className="order-1 lg:order-2 mt-10 lg:mt-0">
                 <div className="bg-gradient-to-br from-primary/20 to-[#6d6f72]/20 rounded-3xl p-8">
-                  <div className="bg-white rounded-2xl shadow-2xl p-4 flex justify-center">
-                    <div className="relative w-[280px] h-[280px] md:w-[460px] md:h-[460px]">
+                  <div className="bg-white rounded-2xl shadow-2xl flex justify-center overflow-hidden">
+                    <div className="relative  h-[280px] w-full md:h-[460px]">
                       <Image
                         src="/images/TrueFace50FP.webp"
                         alt="Biometric Authentication Modes - Face, Fingerprint, Palm, Iris"
                         title="Multiple Biometric Authentication Modes"
                         fill
-                        className="object-contain p-10"
+                        className="object-cover"
                       />
                     </div>
                   </div>

@@ -28,7 +28,7 @@ const addresses = [
     contact:"+91 95999 74776",
     
     lines: [
-      "No.28, 5thAcross, Marenhalli JP Nagar, 2nd Phase, Banglore-560078",
+      "No.28, 5thAcross, Marenhalli JP Nagar, 2nd Phase, Bangalore-560078",
     ],
   },
   {
@@ -231,9 +231,7 @@ const ContactPage = () => {
                   Contact Information
                 </h2>
                 <p className="text-gray-600 mb-8">
-                  Ready to transform your business with cutting-edge biometric
-                  solutions? Our team of experts is here to guide you every step
-                  of the way.
+                  Ready to transform your business with cutting-edge Biometric & Security Solutions ? Our team of experts is here to guide you every step of the way.
                 </p>
               </div>
 
@@ -447,8 +445,7 @@ const ContactPage = () => {
             Ready to Get Started?
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Let's discuss how BiometricPro can transform your business
-            operations
+            Let’s discuss how our access control and security solutions can improve your business operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-[#d63438] px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">

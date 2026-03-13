@@ -225,14 +225,14 @@ const BoomBarrierGatePage = () => {
               {/* Left — Image */}
               <div className="order-1">
                 <div className="bg-gradient-to-br from-primary/20 to-[#6d6f72]/20 rounded-3xl p-8">
-                  <div className="bg-white rounded-2xl shadow-2xl p-4 flex justify-center">
-                    <div className="relative w-[280px] h-[280px] md:w-[460px] md:h-[460px]">
+                  <div className="bg-white rounded-2xl shadow-2xl flex justify-center overflow-hidden">
+                    <div className="relative w-full h-[280px] md:h-[460px]">
                       <Image
                         src="/images/TW-DCLD-7000.webp"
                         alt="What is a Boom Barrier Gate"
                         title="Automatic Boom Barrier Gate Overview"
                         fill
-                        className="object-contain p-10"
+                        className="object-cover"
                       />
                     </div>
                   </div>
@@ -345,14 +345,14 @@ const BoomBarrierGatePage = () => {
               {/* Right — Image */}
               <div className="order-1 lg:order-2 mt-10 lg:mt-0">
                 <div className="bg-gradient-to-br from-primary/20 to-[#6d6f72]/20 rounded-3xl p-8">
-                  <div className="bg-white rounded-2xl shadow-2xl p-4 flex justify-center">
-                    <div className="relative w-[280px] h-[280px] md:w-[460px] md:h-[460px]">
+                  <div className="bg-white rounded-2xl shadow-2xl overflow-hidden flex justify-center">
+                    <div className="relative w-full h-[280px] md:h-[460px]">
                       <Image
                         src="/images/TW6000DCLD.webp"
                         alt="How Automatic Boom Barrier Gate Works"
                         title="Boom Barrier Gate Operation Modes"
                         fill
-                        className="object-contain p-14"
+                        className="object-cover"
                       />
                     </div>
                   </div>
@@ -575,10 +575,10 @@ const BoomBarrierGatePage = () => {
         </section>
 
         {/* ── Boom Barrier for Parking Management ── */}
-        <section className="py-16 bg-white">
+        {/* <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="lg:grid lg:grid-cols-2 gap-12 items-center">
-              {/* Left — Text */}
+            
               <div className="order-2 lg:order-1">
                 <div className="inline-block bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
                   Parking Management
@@ -616,7 +616,7 @@ const BoomBarrierGatePage = () => {
                 </div>
               </div>
 
-              {/* Right — Image */}
+              
               <div className="order-1 lg:order-2 mt-10 lg:mt-0">
                 <div className="bg-gradient-to-br from-primary/20 to-[#6d6f72]/20 rounded-3xl p-8">
                   <div className="bg-white rounded-2xl shadow-2xl p-4 flex justify-center">
@@ -634,7 +634,7 @@ const BoomBarrierGatePage = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* ── Benefits ── */}
         <section className="py-16 bg-gray-50">

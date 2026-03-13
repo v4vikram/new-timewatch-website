@@ -223,14 +223,14 @@ const FaceAttendanceMachinePage = () => {
       {/* Left — Image */}
       <div className="order-1">
         <div className="bg-gradient-to-br from-primary/20 to-[#6d6f72]/20 rounded-3xl p-8">
-          <div className="bg-white rounded-2xl shadow-2xl p-4 flex justify-center">
-            <div className="relative w-[280px] h-[280px] md:w-[460px] md:h-[460px]">
+          <div className="bg-white rounded-2xl shadow-2xl overflow-hidden flex justify-center">
+            <div className="relative w-full h-[280px] md:h-[460px]">
               <Image
                 src="/images/ai-facet5.webp"
                 alt="Face Attendance Machine"
                 title="Face Recognition Attendance System"
                 fill
-                className="object-contain p-10"
+                className="object-cover"
               />
             </div>
           </div>
@@ -239,9 +239,6 @@ const FaceAttendanceMachinePage = () => {
 
       {/* Right — Text */}
       <div className="order-2 mt-10 lg:mt-0">
-        <div className="inline-block bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
-          Overview
-        </div>
 
         <h2 className="text-3xl md:text-4xl font-bold text-[#6d6f72] mb-6">
           What is a Face Attendance Machine?
@@ -272,7 +269,7 @@ const FaceAttendanceMachinePage = () => {
             "Contactless authentication",
             "High accuracy identification",
             "Faster attendance processing",
-            "Improved workplace security",
+            // "Improved workplace security",
           ].map((item, i) => (
             <div key={i} className="flex items-center gap-3">
               <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
@@ -281,10 +278,10 @@ const FaceAttendanceMachinePage = () => {
           ))}
         </div>
 
-        <p className="text-lg text-gray-600 mt-6 leading-relaxed">
+        {/* <p className="text-lg text-gray-600 mt-6 leading-relaxed">
           Businesses across India are increasingly deploying face attendance
           machines to automate attendance tracking and reduce manual errors.
-        </p>
+        </p> */}
       </div>
 
     </div>

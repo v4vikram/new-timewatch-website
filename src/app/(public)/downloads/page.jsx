@@ -78,8 +78,7 @@ const downloadPage = () => {
             Download Software
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Get the latest BiometricPro software solutions for your business
-            needs
+           Download the latest software to support and manage your business operations.
           </p>
           <div className="mt-8 flex justify-center">
             <div className="bg-white rounded-full px-6 py-3 shadow-lg">

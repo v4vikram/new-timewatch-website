@@ -604,7 +604,7 @@ export default async function HomePage() {
           </div>
         </section>
 
-        {/* get catalouge section */}
+        {/* Get Catalogue section */}
         {/* <section>
         <div className="container  mt-6 lg:mt-20">
           <div className="grid lg:grid-cols-2">

@@ -92,7 +92,7 @@ const Footer = () => {
               />
             </Link>
 
-            <small className="mt-0">Get Catalouge</small>
+            <small className="mt-0">Get Catalogue</small>
           </div>
 
           <div>

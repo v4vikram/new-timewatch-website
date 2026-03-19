@@ -2,6 +2,7 @@ import Image from "next/image";
 import ServiceSidebar from "@/components/ServiceSidebar";
 import SolutionsFaq from "@/components/SolutionsFaq";
 import Head from "next/head";
+import NewProductPagesLink from "@/components/NewProductPagesLink";
 
 export const metadata = {
   title:
@@ -301,6 +302,7 @@ export default function CloudAttendancePayrollSoftware() {
 
             {/* FAQ Section */}
             <SolutionsFaq faqs={faqs} />
+            <NewProductPagesLink/>
           </div>
           {/* sidebar */}
           <div className="xl:w-[300px] sticky top-20">

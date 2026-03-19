@@ -231,6 +231,10 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     @apply text-xl
   }
 }
+.new-product-page .swiper-button-prev,
+.new-product-page .swiper-button-next{
+  @apply hidden
+}
 
 /* product cat car */
 .product-cat-card{

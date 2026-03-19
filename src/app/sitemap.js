@@ -62,8 +62,18 @@ export default async function sitemap() {
     "(biometrics-controll-system)"
   );
 
+    // -------- (newPages) PAGES (Nested Folder Scan) --------
+    const newPages = path.join(
+    process.cwd(),
+    "src",
+    "app",
+    "(public)",
+    "(newPages)",
+  );
+
   const solutionUrls = scanFolder(solutionsDir, `${baseUrl}/solutions`);
   const bioUrls = scanFolder(biosDir, `${baseUrl}`);
+  const newPagesUrls = scanFolder(newPages, `${baseUrl}`);
 
   // -------- CATEGORY URLs --------
   const categorySet = new Set(products.map((p) => p.categorySlug));
@@ -101,6 +111,7 @@ export default async function sitemap() {
     ...categoryUrls,
     ...subcategoryUrls,
     ...productUrls,
+    newPagesUrls,
   ].length)
 
   // -------- FINAL RETURN --------
@@ -111,5 +122,6 @@ export default async function sitemap() {
     ...categoryUrls,
     ...subcategoryUrls,
     ...productUrls,
+    ...newPagesUrls,
   ];
 }

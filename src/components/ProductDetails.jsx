@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import {
   Download,
@@ -8,6 +8,7 @@ import {
   FileText,
   MessageCircleMore,
   Phone,
+  Share2,
 } from "lucide-react";
 import Image from "next/image";
 import {
@@ -25,6 +26,8 @@ import FaqDropdown from "./FaqDropdown";
 import { Button } from "./ui/button";
 
 const ProductDetails = ({ product }) => {
+  console.log("🚀 ~ file: ProductDetails.jsx:17 ~ ProductDetails ~ product:", product);
+  const [copied, setCopied] = useState(false);
   if (!product) return null;
 
   const {
@@ -41,23 +44,64 @@ const ProductDetails = ({ product }) => {
     productFaq = [],
   } = product;
 
+  const handleShare = async () => {
+  const shareUrl = `${window.location.origin}/products/${product?.categorySlug}/${product?.subCategorySlug}/${product?.productSlug}`;
+
+  if (navigator.share) {
+    try {
+      await navigator.share({
+        title: productName,
+        text: description || "Check out this product",
+        url: shareUrl,
+      });
+    } catch (err) {
+      console.log("Share cancelled");
+    }
+  } else {
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error("Copy failed");
+    }
+  }
+};
+
   return (
     <div className="container mx-auto px-4 py-10">
       {/* Top Section */}
       <div className="lg:flex gap-20">
         {/* Main Product Image */}
-        <div className="md:w-[550px]">
-          <div className="w-full h-[300px] md:w-[550px] md:h-[500px] relative bg-gray-50 rounded-lg">
-            <Image
-              src={productImage || "/images/placeholder.jpeg"}
-              alt={productName || "Product"}
-              fill
-              className="object-contain lg:p-16"
-              sizes="(max-width: 768px) 300px, 550px"
-              priority
-            />
-          </div>
-        </div>
+<div className="md:w-[550px]">
+  <div className="w-full h-[300px] md:w-[550px] md:h-[500px] relative bg-gray-50 rounded-lg">
+
+    {/* 🔥 Share Button */}
+    <button
+      onClick={handleShare}
+      className="absolute top-3 right-3 z-10 bg-white/80 backdrop-blur-md hover:bg-white shadow-md p-2 rounded-full transition hover:scale-110 active:scale-95"
+    >
+      <Share2 size={18} />
+    </button>
+
+    {/* ✅ Copy Toast */}
+    {copied && (
+      <div className="absolute top-14 right-3 bg-black text-white text-xs px-3 py-1 rounded shadow">
+        Copied!
+      </div>
+    )}
+
+    <Image
+      src={productImage || "/images/placeholder.jpeg"}
+      alt={productName || "Product"}
+      fill
+      className="object-contain lg:p-16"
+      sizes="(max-width: 768px) 300px, 550px"
+      priority
+    />
+  </div>
+</div>
+
 
         {/* Product Info */}
         <div className="space-y-4 flex-1">

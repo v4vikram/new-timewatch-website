@@ -27,7 +27,7 @@ import {
   ChevronDown,
   Headset,
 } from "lucide-react";
-import HeroSection from "@/components/HeroSection";
+// import HeroSection from "@/components/HeroSection";
 import HomePageForm from "@/components/HomePageForm";
 import FeaturedProducts from "@/components/products/FeaturedProducts";
 import FeaturesProduct from "@/components/home/FeaturesProduct";
@@ -165,9 +165,9 @@ export default async function HomePage() {
         <section>
           <BannerSwiper />
         </section>
-        <div className="relative overflow-hidden hidden">
+        {/* <div className="relative overflow-hidden hidden">
           <HeroSection />
-        </div>
+        </div> */}
         {/* <FeaturedProducts/> */}
         {/* features products */}
         <FeaturesProduct publishedProducts={publishedProducts} />

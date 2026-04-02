@@ -10,6 +10,8 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 
 import { ArrowRight } from "lucide-react";
+import { useState } from "react";
+import EmailSuccessPopup from "./forms/EmailSuccessPopup";
 
 const Select = ({ label, name, children }) => (
   <div className="space-y-2">
@@ -24,11 +26,7 @@ const Select = ({ label, name, children }) => (
       {children}
     </Field>
 
-    <ErrorMessage
-      name={name}
-      component="p"
-      className="text-sm text-red-500"
-    />
+    <ErrorMessage name={name} component="p" className="text-sm text-red-500" />
   </div>
 );
 
@@ -65,6 +63,8 @@ const validationSchema = Yup.object({
 });
 
 const RnaPage = () => {
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const initialValues = {
     name: "",
     company: "",
@@ -96,10 +96,23 @@ const RnaPage = () => {
 
   const handleSubmit = async (values, { resetForm }) => {
     try {
-      await axiosInstance.post("/service-request", values);
-      resetForm();
+      setIsLoading(true);
+      const res = await axiosInstance.post("/form/service-request", values);
+
+      if (res?.status === 201) {
+        setTimeout(() => {
+          setIsSuccess(true);
+          setIsLoading(false);
+          resetForm();
+        },500);
+      }
     } catch (err) {
       console.error(err);
+    } finally {
+      setTimeout(() => {
+        setIsLoading(false);
+        setIsSuccess(false)
+      }, 2000);
     }
   };
 
@@ -111,71 +124,111 @@ const RnaPage = () => {
     >
       {({ values }) => (
         <Form className="space-y-6">
-
+          {isSuccess && <EmailSuccessPopup />}
           {/* Basic Info */}
           <div className="grid md:grid-cols-3 gap-6">
-
             <div className="space-y-2">
               <Label htmlFor="name">Name</Label>
               <Field as={Input} name="name" id="name" />
-              <ErrorMessage name="name" component="p" className="text-sm text-red-500"/>
+              <ErrorMessage
+                name="name"
+                component="p"
+                className="text-sm text-red-500"
+              />
             </div>
 
             <div className="space-y-2">
               <Label htmlFor="company">Company</Label>
               <Field as={Input} name="company" id="company" />
-              <ErrorMessage name="company" component="p" className="text-sm text-red-500"/>
+              <ErrorMessage
+                name="company"
+                component="p"
+                className="text-sm text-red-500"
+              />
             </div>
 
             <div className="space-y-2">
               <Label htmlFor="customerId">Customer ID</Label>
               <Field as={Input} name="customerId" id="customerId" />
-              <ErrorMessage name="customerId" component="p" className="text-sm text-red-500"/>
+              <ErrorMessage
+                name="customerId"
+                component="p"
+                className="text-sm text-red-500"
+              />
             </div>
 
             <div className="space-y-2">
               <Label htmlFor="address">Address</Label>
               <Field as={Input} name="address" id="address" />
-              <ErrorMessage name="address" component="p" className="text-sm text-red-500"/>
+              <ErrorMessage
+                name="address"
+                component="p"
+                className="text-sm text-red-500"
+              />
             </div>
 
             <div className="space-y-2">
               <Label htmlFor="phone">Phone</Label>
               <Field as={Input} name="phone" id="phone" />
-              <ErrorMessage name="phone" component="p" className="text-sm text-red-500"/>
+              <ErrorMessage
+                name="phone"
+                component="p"
+                className="text-sm text-red-500"
+              />
             </div>
 
             <div className="space-y-2">
               <Label htmlFor="email">Email</Label>
               <Field as={Input} name="email" id="email" type="email" />
-              <ErrorMessage name="email" component="p" className="text-sm text-red-500"/>
+              <ErrorMessage
+                name="email"
+                component="p"
+                className="text-sm text-red-500"
+              />
             </div>
-
           </div>
 
           {/* Product Info */}
           <div className="grid md:grid-cols-2 gap-6">
-
             <div className="space-y-2">
               <Label htmlFor="modelNo">Model No</Label>
-              <Field as={Input} name="modelNo" id="modelNo"/>
+              <Field as={Input} name="modelNo" id="modelNo" />
+              <ErrorMessage
+                name="modelNo"
+                component="p"
+                className="text-sm text-red-500"
+              />
             </div>
 
             <div className="space-y-2">
               <Label htmlFor="serialNo">Serial No</Label>
-              <Field as={Input} name="serialNo" id="serialNo"/>
+              <Field as={Input} name="serialNo" id="serialNo" />
+              <ErrorMessage
+                name="serialNo"
+                component="p"
+                className="text-sm text-red-500"
+              />
             </div>
 
             <div className="space-y-2">
               <Label htmlFor="dateOfPurchase">Date Of Purchase</Label>
-              <Field as={Input} name="dateOfPurchase" type="date"/>
+              <Field as={Input} name="dateOfPurchase" type="date" />
+              <ErrorMessage
+                name="dateOfPurchase"
+                component="p"
+                className="text-sm text-red-500"
+              />
             </div>
 
             <div className="space-y-2">
               <Label htmlFor="purchasedFrom">Purchased From</Label>
-              <Field as={Input} name="purchasedFrom"/>
+              <Field as={Input} name="purchasedFrom" />
+              <ErrorMessage
+                name="purchasedFrom"
+                component="p"
+                className="text-sm text-red-500"
+              />
             </div>
-
           </div>
 
           {/* Dispatched Item */}
@@ -195,25 +248,39 @@ const RnaPage = () => {
           {values.dispatchedItem === "Other" && (
             <div className="space-y-2">
               <Label htmlFor="otherItem">Other Item</Label>
-              <Field as={Input} name="otherItem"/>
+              <Field as={Input} name="otherItem" />
+              <ErrorMessage
+                name="otherItem"
+                component="p"
+                className="text-sm text-red-500"
+              />
             </div>
           )}
 
           {/* Fault */}
           <div className="space-y-2">
             <Label htmlFor="fault">Fault</Label>
-            <Field as={Textarea} name="fault"/>
+            <Field as={Textarea} name="fault" />
+            <ErrorMessage
+              name="fault"
+              component="p"
+              className="text-sm text-red-500"
+            />
           </div>
 
           {/* Remarks */}
           <div className="space-y-2">
             <Label htmlFor="remarks">Remarks</Label>
-            <Field as={Textarea} name="remarks"/>
+            <Field as={Textarea} name="remarks" />
+            <ErrorMessage
+              name="remarks"
+              component="p"
+              className="text-sm text-red-500"
+            />
           </div>
 
           {/* Dispatch Info */}
           <div className="grid md:grid-cols-2 gap-6">
-
             <Select name="dispatchThrough" label="Dispatch Through">
               <option value="">Select</option>
               <option>DHL</option>
@@ -225,45 +292,72 @@ const RnaPage = () => {
 
             <div className="space-y-2">
               <Label htmlFor="trackingNumber">Tracking Number</Label>
-              <Field as={Input} name="trackingNumber"/>
+              <Field as={Input} name="trackingNumber" />
+              <ErrorMessage
+                name="trackingNumber"
+                component="p"
+                className="text-sm text-red-500"
+              />
             </div>
 
             <div className="space-y-2">
               <Label htmlFor="dispatchedDate">Dispatched Date</Label>
-              <Field as={Input} name="dispatchedDate" type="date"/>
+              <Field as={Input} name="dispatchedDate" type="date" />
+              <ErrorMessage
+                name="dispatchedDate"
+                component="p"
+                className="text-sm text-red-500"
+              />
             </div>
 
             <div className="space-y-2">
               <Label htmlFor="dispatchDestination">Dispatch Destination</Label>
-              <Field as={Input} name="dispatchDestination"/>
+              <Field as={Input} name="dispatchDestination" />
+              <ErrorMessage
+                name="dispatchDestination"
+                component="p"
+                className="text-sm text-red-500"
+              />
             </div>
-
           </div>
 
           {/* Footer */}
           <div className="grid md:grid-cols-3 gap-6">
-
             <div className="space-y-2">
               <Label htmlFor="place">Place</Label>
-              <Field as={Input} name="place"/>
+              <Field as={Input} name="place" />
+              <ErrorMessage
+                name="place"
+                component="p"
+                className="text-sm text-red-500"
+              />
             </div>
 
             <div className="space-y-2">
               <Label htmlFor="formDate">Form Date</Label>
-              <Field as={Input} name="formDate" type="date"/>
+              <Field as={Input} name="formDate" type="date" />
+              <ErrorMessage
+                name="formDate"
+                component="p"
+                className="text-sm text-red-500"
+              />
             </div>
 
             <div className="space-y-2">
               <Label htmlFor="sign">Signature</Label>
-              <Field as={Input} name="sign"/>
+              <Field as={Input} name="sign" />
+              <ErrorMessage
+                name="sign"
+                component="p"
+                className="text-sm text-red-500"
+              />
             </div>
-
           </div>
 
           <Button type="submit" className="w-full">
-            Submit <ArrowRight className="ml-2 h-4 w-4"/>
+            {isLoading ? "Submitting..." : "Submit"}{" "}
+            <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
-
         </Form>
       )}
     </Formik>

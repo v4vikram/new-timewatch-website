@@ -7,10 +7,10 @@ import {
   Building,
 } from "lucide-react";
 
-import RnaForm from "@/components/RnaForm"; // your existing form component
+import RmaForm from "@/components/RmaForm"; // your existing form component
 
 export const metadata = {
-  title: "RNA Service Request | TimeWatch Infocom",
+  title: "RMA Service Request | TimeWatch Infocom",
   description:
     "Submit a service request for TimeWatch devices including repair, troubleshooting, and dispatch tracking.",
 };
@@ -53,7 +53,7 @@ const RnaPage = () => {
           </div>
 
           <h1 className="text-4xl md:text-5xl font-bold text-[#6d6f72] mb-6">
-            Service Request (RNA)
+            Service Request (RMA)
           </h1>
 
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -69,12 +69,12 @@ const RnaPage = () => {
 
           <div className="flex flex-col lg:grid lg:grid-cols-1 gap-12">
 
-            {/* RNA FORM */}
+            {/* RMA FORM */}
             <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
 
               <div className="bg-gradient-to-r from-[#d63438] to-[#6d6f72] px-8 py-4 text-center">
                 <h2 className="text-[1.5rem] lg:text-3xl font-bold text-white mb-2">
-                  RNA Service Form
+                  RMA Service Form
                 </h2>
 
                 <p className="text-white/90">
@@ -83,7 +83,7 @@ const RnaPage = () => {
               </div>
 
               <div className="p-4 lg:p-8">
-                <RnaForm />
+                <RmaForm />
               </div>
             </div>
 

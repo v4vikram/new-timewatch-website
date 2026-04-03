@@ -62,7 +62,7 @@ const validationSchema = Yup.object({
   sign: Yup.string().required("Required"),
 });
 
-const RnaPage = () => {
+const RmaForm = () => {
   const [isSuccess, setIsSuccess] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const initialValues = {
@@ -104,15 +104,15 @@ const RnaPage = () => {
           setIsSuccess(true);
           setIsLoading(false);
           resetForm();
-        },500);
+        }, 500);
       }
     } catch (err) {
       console.error(err);
     } finally {
       setTimeout(() => {
         setIsLoading(false);
-        setIsSuccess(false)
-      }, 2000);
+        setIsSuccess(false);
+      }, 1000);
     }
   };
 
@@ -186,49 +186,48 @@ const RnaPage = () => {
                 className="text-sm text-red-500"
               />
             </div>
-          </div>
+         
 
           {/* Product Info */}
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="space-y-2">
-              <Label htmlFor="modelNo">Model No</Label>
-              <Field as={Input} name="modelNo" id="modelNo" />
-              <ErrorMessage
-                name="modelNo"
-                component="p"
-                className="text-sm text-red-500"
-              />
-            </div>
 
-            <div className="space-y-2">
-              <Label htmlFor="serialNo">Serial No</Label>
-              <Field as={Input} name="serialNo" id="serialNo" />
-              <ErrorMessage
-                name="serialNo"
-                component="p"
-                className="text-sm text-red-500"
-              />
-            </div>
+          <div className="space-y-2">
+            <Label htmlFor="modelNo">Model No</Label>
+            <Field as={Input} name="modelNo" id="modelNo" />
+            <ErrorMessage
+              name="modelNo"
+              component="p"
+              className="text-sm text-red-500"
+            />
+          </div>
 
-            <div className="space-y-2">
-              <Label htmlFor="dateOfPurchase">Date Of Purchase</Label>
-              <Field as={Input} name="dateOfPurchase" type="date" />
-              <ErrorMessage
-                name="dateOfPurchase"
-                component="p"
-                className="text-sm text-red-500"
-              />
-            </div>
+          <div className="space-y-2">
+            <Label htmlFor="serialNo">Serial No</Label>
+            <Field as={Input} name="serialNo" id="serialNo" />
+            <ErrorMessage
+              name="serialNo"
+              component="p"
+              className="text-sm text-red-500"
+            />
+          </div>
 
-            <div className="space-y-2">
-              <Label htmlFor="purchasedFrom">Purchased From</Label>
-              <Field as={Input} name="purchasedFrom" />
-              <ErrorMessage
-                name="purchasedFrom"
-                component="p"
-                className="text-sm text-red-500"
-              />
-            </div>
+          <div className="space-y-2">
+            <Label htmlFor="dateOfPurchase">Date Of Purchase</Label>
+            <Field as={Input} name="dateOfPurchase" type="date" />
+            <ErrorMessage
+              name="dateOfPurchase"
+              component="p"
+              className="text-sm text-red-500"
+            />
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="purchasedFrom">Purchased From</Label>
+            <Field as={Input} name="purchasedFrom" />
+            <ErrorMessage
+              name="purchasedFrom"
+              component="p"
+              className="text-sm text-red-500"
+            />
           </div>
 
           {/* Dispatched Item */}
@@ -257,7 +256,81 @@ const RnaPage = () => {
             </div>
           )}
 
-          {/* Fault */}
+      
+
+          {/* Dispatch Info */}
+
+          <Select name="dispatchThrough" label="Dispatch Through">
+            <option value="">Select</option>
+            <option>DHL</option>
+            <option>FedEx</option>
+            <option>DTDC</option>
+            <option>BlueDart</option>
+            <option>Other</option>
+          </Select>
+
+          <div className="space-y-2">
+            <Label htmlFor="trackingNumber">Tracking Number</Label>
+            <Field as={Input} name="trackingNumber" />
+            <ErrorMessage
+              name="trackingNumber"
+              component="p"
+              className="text-sm text-red-500"
+            />
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="dispatchedDate">Dispatched Date</Label>
+            <Field as={Input} name="dispatchedDate" type="date" />
+            <ErrorMessage
+              name="dispatchedDate"
+              component="p"
+              className="text-sm text-red-500"
+            />
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="dispatchDestination">Dispatch Destination</Label>
+            <Field as={Input} name="dispatchDestination" />
+            <ErrorMessage
+              name="dispatchDestination"
+              component="p"
+              className="text-sm text-red-500"
+            />
+          </div>
+
+          {/* Footer */}
+
+          <div className="space-y-2">
+            <Label htmlFor="place">Place</Label>
+            <Field as={Input} name="place" />
+            <ErrorMessage
+              name="place"
+              component="p"
+              className="text-sm text-red-500"
+            />
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="formDate">Form Date</Label>
+            <Field as={Input} name="formDate" type="date" />
+            <ErrorMessage
+              name="formDate"
+              component="p"
+              className="text-sm text-red-500"
+            />
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="sign">Signature</Label>
+            <Field as={Input} name="sign" />
+            <ErrorMessage
+              name="sign"
+              component="p"
+              className="text-sm text-red-500"
+            />
+          </div>
+              {/* Fault */}
           <div className="space-y-2">
             <Label htmlFor="fault">Fault</Label>
             <Field as={Textarea} name="fault" />
@@ -278,82 +351,7 @@ const RnaPage = () => {
               className="text-sm text-red-500"
             />
           </div>
-
-          {/* Dispatch Info */}
-          <div className="grid md:grid-cols-2 gap-6">
-            <Select name="dispatchThrough" label="Dispatch Through">
-              <option value="">Select</option>
-              <option>DHL</option>
-              <option>FedEx</option>
-              <option>DTDC</option>
-              <option>BlueDart</option>
-              <option>Other</option>
-            </Select>
-
-            <div className="space-y-2">
-              <Label htmlFor="trackingNumber">Tracking Number</Label>
-              <Field as={Input} name="trackingNumber" />
-              <ErrorMessage
-                name="trackingNumber"
-                component="p"
-                className="text-sm text-red-500"
-              />
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="dispatchedDate">Dispatched Date</Label>
-              <Field as={Input} name="dispatchedDate" type="date" />
-              <ErrorMessage
-                name="dispatchedDate"
-                component="p"
-                className="text-sm text-red-500"
-              />
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="dispatchDestination">Dispatch Destination</Label>
-              <Field as={Input} name="dispatchDestination" />
-              <ErrorMessage
-                name="dispatchDestination"
-                component="p"
-                className="text-sm text-red-500"
-              />
-            </div>
-          </div>
-
-          {/* Footer */}
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="space-y-2">
-              <Label htmlFor="place">Place</Label>
-              <Field as={Input} name="place" />
-              <ErrorMessage
-                name="place"
-                component="p"
-                className="text-sm text-red-500"
-              />
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="formDate">Form Date</Label>
-              <Field as={Input} name="formDate" type="date" />
-              <ErrorMessage
-                name="formDate"
-                component="p"
-                className="text-sm text-red-500"
-              />
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="sign">Signature</Label>
-              <Field as={Input} name="sign" />
-              <ErrorMessage
-                name="sign"
-                component="p"
-                className="text-sm text-red-500"
-              />
-            </div>
-          </div>
-
+           </div>
           <Button type="submit" className="w-full">
             {isLoading ? "Submitting..." : "Submit"}{" "}
             <ArrowRight className="ml-2 h-4 w-4" />
@@ -364,4 +362,4 @@ const RnaPage = () => {
   );
 };
 
-export default RnaPage;
+export default RmaForm;

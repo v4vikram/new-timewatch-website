@@ -196,7 +196,7 @@ const schemaFaq = {
                 </li>
               </ul>
 
-              <h2>Applications in India & Beyond</h2>
+              <h2>Applications</h2>
               <ul>
                 <li>
                   <strong>Metro & Railway Stations:</strong> Handle peak-hour

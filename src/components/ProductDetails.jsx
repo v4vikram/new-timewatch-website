@@ -43,16 +43,17 @@ const ProductDetails = ({ product }) => {
     table = [],
     productFaq = [],
   } = product;
-
-  const handleShare = async () => {
+  console.log("productImage", productImage);
+  
+const handleShare = async () => {
   const shareUrl = `${window.location.origin}/products/${product?.categorySlug}/${product?.subCategorySlug}/${product?.productSlug}`;
 
   if (navigator.share) {
     try {
       await navigator.share({
         title: productName,
-        text: description || "Check out this product",
-        url: shareUrl,
+        text: description?.substring(0, 80) || "Check out this product",
+        url: shareUrl, // 🔥 keep URL separate
       });
     } catch (err) {
       console.log("Share cancelled");
@@ -67,6 +68,7 @@ const ProductDetails = ({ product }) => {
     }
   }
 };
+
 
   return (
     <div className="container mx-auto px-4 py-10">

@@ -211,6 +211,9 @@ export function HeaderNavigationMenu() {
                   <Link href="/ceo-desk">CEO's Desk</Link>
                 </div>
                 <div className="mb-4 hover:text-primary">
+                  <Link href="/rma">RMA</Link>
+                </div>
+                <div className="mb-4 hover:text-primary">
                   <Link href="/blogs">Blogs</Link>
                 </div>
               </div>

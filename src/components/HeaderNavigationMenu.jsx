@@ -190,7 +190,7 @@ export function HeaderNavigationMenu() {
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuTrigger className="flex items-center gap-1 hover:!bg-transparent !bg-transparent data-[active=true]:!text-primary hover:!text-primary focus:!text-primary text-[18px] font-semibold !text-black">
-              <Link href={"/solutions"} className={getLinkClass("/solutions")}>
+              <Link href={"#"} className={getLinkClass("/solutions")}>
                 Resource
               </Link>
               {/* <ChevronDown className="w-4 h-4" /> */}

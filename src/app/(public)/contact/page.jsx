@@ -91,7 +91,7 @@ const ContactPage = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: ["+91-95999 53923", "011-4191-6615"],
+      details: ["+91-95999 53923","+91 99216 49921", "011-4191-6615"],
       subtitle: "Support - 24/7",
     },
     {

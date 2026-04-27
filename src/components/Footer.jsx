@@ -146,6 +146,12 @@ const Footer = () => {
                 >
                   +91-95999 53923
                 </a>
+                <a
+                  href="tel:+91 99216 49921"
+                  className="hover:text-white transition-colors"
+                >
+                  +91-99216 49921
+                </a>
               </li>
               <li className="flex flex-col leading-[20px]">
                 <span className="text-white pr-2 font-semibold">
